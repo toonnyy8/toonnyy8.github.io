@@ -1,0 +1,17 @@
+- Chicken Scheme
+	- 套件管理庫：egg
+		- 關於安裝特定版本的 egg
+			- ``chicken-install <egg name>:<version>``
+		- 查看 egg 的所有版本
+			- ``chicken-install -list-version <egg name>``
+		- 設定安裝 egg 位置
+			- 要設置環境變數 `CHICKEN_REPOSITORY_PATH`, `CHICKEN_INSTALL_REPOSITORY`, `CHICKEN_INSTALL_PREFIX`
+				- CHICKEN_REPOSITORY_PATH 是在編譯、執行時會找尋 egg 的路徑列表
+				- e.g. `export CHICKEN_REPOSITORY_PATH=/usr/local/lib/chicken/11:~/git/csi-test/.nest`
+		- 可以幫 chicken scheme 編寫一個 project-local library installer，來管理版本依賴並避免專案之間互相衝突
+			- 以此為基礎設計 local package manager **Nest**
+			- 顯示虛擬環境的名稱 `export VIRTUAL_ENV="<path>/<env name>"`
+			- 啟動虛擬環境
+				- 設定環境變數並保存舊變數
+				  建立關閉環境的函數
+					- 還原舊變數

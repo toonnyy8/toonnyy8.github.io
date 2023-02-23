@@ -1,0 +1,5 @@
+- 參照 Qlot 建構更便捷的 local package manager
+	- https://github.com/fukamachi/qlot/blob/aed5761d5ab5e9708c43553d0de0a27852f2a5cd/install.lisp#L144
+	- 切換下載位置（全域、區域）〉切換 quicklisp 版本〉安裝套件
+	- 要處理版本相依性的問題
+		- git, https, quicklisp
